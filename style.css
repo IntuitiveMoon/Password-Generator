@@ -1,0 +1,80 @@
+body {
+    background-color: #183446;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    margin: 0;
+    line-height: 0.2;
+}
+
+.header1text {
+    color: #046E8F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+
+#header1texthighlight {
+    color: #38AECC;
+}
+
+#header2text {
+    color: #0090C1;
+    margin-top: 45px;
+    font-size: 30px;
+}
+
+#genpass {
+    display: flex;
+    justify-content: start;
+}
+
+#genpassbtn {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #38AECC;
+    border: 0px;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 32px;
+    font-size: 18px;
+}
+
+#genpassbtn:hover {
+    background-color: #2f98b4;
+    transition: background-color 0.2s ease;
+}
+
+#genpassbtn:active {
+    transform: translateY(1.2px);
+}
+
+
+#line {
+    background-color: #046E8F;
+    width: 500px;
+    height: 3px;
+    margin-top: 50px;
+}
+
+#passblocks {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    width: 500px;
+} 
+
+.passblock {
+    background-color: #132a38;
+    width: 200px;
+    height: 30px;
+
+}
+
+.passblocktext {
+    text-align: center;
+    color: #38AECC;
+}
