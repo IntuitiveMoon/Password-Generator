@@ -25,30 +25,29 @@ body {
     font-size: 30px;
 }
 
-#genpass {
-    display: flex;
-    justify-content: start;
+.btn-container {
+    display: flex;           
+    gap: 15px;               
+    justify-content: space-between;
+    margin-top: 60px;       
 }
 
-#genpassbtn {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+.btn {
     background-color: #38AECC;
-    border: 0px;
+    border: 0;
     color: white;
     border-radius: 5px;
     padding: 15px 32px;
     font-size: 18px;
+    cursor: pointer;
 }
 
-#genpassbtn:hover {
+.btn:hover {
     background-color: #2f98b4;
     transition: background-color 0.2s ease;
 }
 
-#genpassbtn:active {
+.btn:active {
     transform: translateY(1.2px);
 }
 
@@ -77,4 +76,84 @@ body {
 .passblocktext {
     text-align: center;
     color: #38AECC;
+}
+
+/* checkboxes */
+
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.options:hover {
+    color: #38AECC;
+}
+
+.options input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #38AECC;   
+    border-radius: 4px;           
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;   
+}
+
+.options input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); 
+}
+
+.options:hover .checkmark {
+    border-color: #38AECC;  
+    background-color: #61a0c9;
+}
+
+.controls {
+    position: relative;
+}
+
+#checkboxes {
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #326c92; 
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #326c92;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;  
+    transition: opacity 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#checkboxes.show {
+    max-height: 200px;
+    opacity: 1;
+    pointer-events: auto;  
 }
